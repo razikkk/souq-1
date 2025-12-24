@@ -1,6 +1,4 @@
-import React from "react";
 import { Avatar, AvatarImage } from "../../../../components/ui/avatar";
-import { FaRecycle } from "react-icons/fa";
 
 
 export const TestimonialsSection = () => {
