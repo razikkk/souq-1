@@ -3,7 +3,7 @@ import { Avatar, AvatarImage } from "../../../../components/ui/avatar";
 import { FaRecycle } from "react-icons/fa";
 
 
-export const TestimonialsSection = (): JSX.Element => {
+export const TestimonialsSection = () => {
   return (
     <section className="w-full py-16 px-8 flex items-center justify-center gap-24 [background:radial-gradient(50%_50%_at_50%_-9%,rgba(39,39,42,1)_0%,rgba(0,0,0,1)_100%)]">
       <div className="flex items-center gap-6">

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -42,7 +41,7 @@ const faqItems = [
   },
 ];
 
-export const FaqSection = (): JSX.Element => {
+export const FaqSection = () => {
   return (
     <section className="w-full py-32 flex flex-col gap-14 bg-white">
       <header className="mx-auto max-w-[438px] flex flex-col gap-0.5 items-center">

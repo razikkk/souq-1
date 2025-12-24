@@ -38,7 +38,7 @@ const statistics = [
   },
 ];
 
-export const ServicesSection = (): JSX.Element => {
+export const ServicesSection = ()=> {
   return (
     <section className="w-full py-16 px-4">
       <div className="max-w-[800px] mx-auto">

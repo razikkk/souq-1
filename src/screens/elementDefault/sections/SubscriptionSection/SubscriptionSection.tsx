@@ -54,7 +54,7 @@ const features = [
   },
 ];
 
-export const SubscriptionSection = (): JSX.Element => {
+export const SubscriptionSection = () => {
   return (
     <section className="w-full py-20 px-8">
       <div className="max-w-[1120px] mx-auto">

@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
@@ -17,7 +16,7 @@ const productCards = [
   },
 ];
 
-export const CrewSection = (): JSX.Element => {
+export const CrewSection = () => {
   return (
     <section className="w-full py-20 bg-[linear-gradient(180deg,rgba(250,250,250,1)_0%,rgba(244,244,245,1)_100%)]">
       <div className="container mx-auto px-4">

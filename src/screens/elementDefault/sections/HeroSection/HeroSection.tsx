@@ -1,8 +1,7 @@
-import { StarIcon } from "lucide-react";
-import React from "react";
+
 import { Avatar, AvatarImage } from "../../../../components/ui/avatar";
 import { Button } from "../../../../components/ui/button";
-import { BsArrowRight, BsArrowRightCircleFill, BsArrowRightShort } from "react-icons/bs";
+import { BsArrowRightShort } from "react-icons/bs";
 
 
 const navigationItems = [
@@ -12,7 +11,7 @@ const navigationItems = [
   { label: "Contact", href: "#" },
 ];
 
-export const HeroSection = (): JSX.Element => {
+export const HeroSection = () => {
   return (
     <section className="relative w-full h-[730px] bg-white">
       <header className="absolute w-full top-[52px] left-0 h-[68px] bg-white border-b border-zinc-100">

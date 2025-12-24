@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { BsArrowRightShort } from "react-icons/bs";
 
@@ -16,7 +15,7 @@ const socialLinks = [
   { label: "Instagram" },
 ];
 
-export const ProductVariantSection = (): JSX.Element => {
+export const ProductVariantSection = () => {
   return (
     <footer className="w-full bg-black relative">
       <div className="w-full flex flex-col items-center">

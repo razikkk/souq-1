@@ -8,7 +8,7 @@ import { ServicesSection } from "./sections/ServicesSection/ServiceSection";
 import { SubscriptionSection } from "./sections/SubscriptionSection/SubscriptionSection";
 import { TestimonialsSection } from "./sections/TestimonialSection/TestimonialSection";
 
-export const ElementDefault = (): JSX.Element => {
+export const ElementDefault = () => {
   return (
     <div className="bg-white w-full min-w-[1440px] flex flex-col">
       <header className="w-full h-[42px] bg-neutral-50 flex items-center justify-center sticky top-0 z-50">
