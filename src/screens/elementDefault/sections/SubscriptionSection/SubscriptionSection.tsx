@@ -9,10 +9,19 @@ import { IoCloudOffline } from "react-icons/io5";
 import { IoMdPricetag } from "react-icons/io";
 import { AE } from 'country-flag-icons/react/3x2'
 
+import { IconType } from "react-icons";
+
+interface Step {
+  icon: string | IconType;
+  title: string;
+  description: string;
+  duration?: string | null;
+  durationIcon?: string | IconType | null;
+}
 
 
 
-const steps = [
+const steps:Step[] = [
   {
     icon: PiHandTapFill,
     title: "Get a Quote",

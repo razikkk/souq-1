@@ -1,7 +1,5 @@
 import { MailIcon, MapPinIcon } from "lucide-react";
-import React from "react";
 import { CrewSection } from "./sections/crewSection/CrewSection";
-import { FaqSection } from "./sections/faqSection/Faq";
 import { HeroSection } from "./sections/HeroSection/HeroSection";
 import { ProductVariantSection } from "./sections/ProductVariantSection/ProductVariantSection";
 import { ServicesSection } from "./sections/ServicesSection/ServiceSection";
