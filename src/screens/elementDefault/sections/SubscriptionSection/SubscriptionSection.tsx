@@ -133,40 +133,52 @@ export const SubscriptionSection = () => {
           </CardContent>
         </Card>
 
-        <div className="flex items-start justify-between mt-16 max-w-[1120px] mx-auto">
-          {features.map((feature, index) => (
-            <React.Fragment key={index}>
-              <div className="flex flex-col items-center gap-6 flex-1">
-                <div className="flex items-center gap-[10px]">
-                {typeof feature.icon === "string" ? (
-  <img
-    src={feature.icon}
-    alt={feature.title}
-    className="w-[18px] h-[18px]"
-  />
-) : (
-  <feature.icon className="w-[18px] h-[18px] text-zinc-700" />
-)}
+        <div className="
+  mt-16 
+  max-w-[1120px] 
+  mx-auto
+  grid 
+  grid-cols-1 
+  md:grid-cols-2 
+  lg:flex
+  gap-y-10
+">
+  {features.map((feature, index) => (
+    <React.Fragment key={index}>
+      {/* FEATURE */}
+      <div className="flex flex-col items-center gap-4 lg:gap-6 flex-1 text-center">
+        <div className="flex items-center gap-[10px]">
+          {typeof feature.icon === "string" ? (
+            <img
+              src={feature.icon}
+              alt={feature.title}
+              className="w-[18px] h-[18px]"
+            />
+          ) : (
+            <feature.icon className="w-[18px] h-[18px] text-zinc-700" />
+          )}
 
-                  <div className="text-zinc-700 text-base">
-                    {feature.title}
-                  </div>
-                </div>
-
-                <div className="text-zinc-500 text-[15px] text-center">
-                  {feature.description}
-                </div>
-              </div>
-
-              {index < features.length - 1 && (
-                <Separator
-                  orientation="vertical"
-                  className="h-[77px] bg-zinc-200"
-                />
-              )}
-            </React.Fragment>
-          ))}
+          <div className="text-zinc-700 text-base">
+            {feature.title}
+          </div>
         </div>
+
+        <div className="text-zinc-500 text-[15px] max-w-[260px]">
+          {feature.description}
+        </div>
+      </div>
+
+      {/* DESKTOP SEPARATOR ONLY */}
+      {index < features.length - 1 && (
+        <Separator
+          orientation="vertical"
+          className="hidden lg:block h-[77px] bg-zinc-200"
+        />
+      )}
+    </React.Fragment>
+  ))}
+</div>
+
       </div>
     </section>
   );

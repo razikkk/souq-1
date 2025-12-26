@@ -72,23 +72,43 @@ export const ServicesSection = ()=> {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-8">
-          {statistics.map((stat, index) => (
-            <React.Fragment key={index}>
-              {index > 0 && (
-                <Separator orientation="vertical" className="h-[60px]" />
-              )}
-              <div className="flex flex-col gap-px items-center">
-                <div className="[font-family:'Inter',Helvetica] font-normal text-black text-base tracking-[-0.32px] leading-8">
-                  {stat.value}
-                </div>
-                <div className="[font-family:'Inter',Helvetica] font-normal text-zinc-500 text-[15px] tracking-[-0.15px] leading-[27px]">
-                  {stat.label}
-                </div>
-              </div>
-            </React.Fragment>
-          ))}
+        <div
+  className="
+    max-w-[900px]
+    mx-auto
+    mt-10
+    grid 
+    grid-cols-1 
+    md:grid-cols-2 
+    lg:flex 
+    items-center 
+    justify-center 
+    gap-6 lg:gap-8
+  "
+>
+  {statistics.map((stat, index) => (
+    <React.Fragment key={index}>
+      {/* DESKTOP SEPARATOR */}
+      {index > 0 && (
+        <Separator
+          orientation="vertical"
+          className="hidden lg:block h-[60px]"
+        />
+      )}
+
+      {/* STAT */}
+      <div className="flex flex-col gap-px items-center text-center">
+        <div className="font-normal text-black text-base tracking-[-0.32px] leading-8">
+          {stat.value}
         </div>
+        <div className="font-normal text-zinc-500 text-[15px] tracking-[-0.15px] leading-[27px]">
+          {stat.label}
+        </div>
+      </div>
+    </React.Fragment>
+  ))}
+</div>
+
       </div>
     </section>
   );

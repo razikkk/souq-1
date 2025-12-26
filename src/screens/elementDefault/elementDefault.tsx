@@ -8,24 +8,28 @@ import { TestimonialsSection } from "./sections/TestimonialSection/TestimonialSe
 
 export const ElementDefault = () => {
   return (
-    <div className="bg-white w-full min-w-[1440px] flex flex-col">
-      <header className="w-full h-[42px] bg-neutral-50 flex items-center justify-center sticky top-0 z-50">
-        <div className="max-w-[1440px] w-full px-80 flex items-center justify-between gap-[357.3px]">
+    <div className="bg-white w-full flex flex-col overflow-hidden">
+      
+      {/* TOP BAR */}
+      <header className="w-full h-[42px] bg-neutral-50 sticky top-0 z-50">
+        <div className="max-w-[1280px] mx-auto h-full px-4 md:px-8 lg:px-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <MapPinIcon className="w-4 h-4 text-zinc-500" />
-            <span className="[font-family:'Inter',Helvetica] font-medium text-zinc-500 text-sm tracking-[0] leading-[18px] whitespace-nowrap">
+            <span className="font-medium text-zinc-500 text-sm whitespace-nowrap">
               1234 Dubai, UAE
             </span>
           </div>
+
           <div className="flex items-center gap-2">
             <MailIcon className="w-4 h-4 text-zinc-500" />
-            <span className="[font-family:'Inter',Helvetica] font-medium text-zinc-500 text-sm tracking-[0] leading-[18px] whitespace-nowrap">
+            <span className="font-medium text-zinc-500 text-sm whitespace-nowrap">
               hello@souqBack.com
             </span>
           </div>
         </div>
       </header>
 
+      {/* MAIN CONTENT */}
       <main className="w-full flex flex-col">
         <section className="w-full relative">
           <HeroSection />
@@ -50,10 +54,6 @@ export const ElementDefault = () => {
         <section className="w-full relative">
           <ProductVariantSection />
         </section>
-
-        {/* <section className="w-full relative">
-          <FaqSection />
-        </section> */}
       </main>
     </div>
   );

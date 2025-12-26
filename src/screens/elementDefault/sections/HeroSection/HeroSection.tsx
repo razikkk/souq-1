@@ -1,7 +1,9 @@
 
+import { useState } from "react";
 import { Avatar, AvatarImage } from "../../../../components/ui/avatar";
 import { Button } from "../../../../components/ui/button";
 import { BsArrowRightShort } from "react-icons/bs";
+import { Menu, X } from "lucide-react";
 
 
 const navigationItems = [
@@ -12,19 +14,30 @@ const navigationItems = [
 ];
 
 export const HeroSection = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <section className="relative w-full h-[730px] bg-white">
-      <header className="absolute w-full top-[52px] left-0 h-[68px] bg-white border-b border-zinc-100">
-        <div className="max-w-[1280px] mx-auto px-20 h-full flex items-center justify-between">
-          <div className="flex items-center gap-[98px]">
-            <div className="w-[64px] h-[30px]" />
+         <header className="absolute w-full top-[52px] left-0 h-[68px] bg-white border-b border-zinc-100 z-50">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-20 h-full flex items-center justify-between">
+          
+          {/* LEFT */}
+          <div className="flex items-center gap-6 md:gap-[98px]">
+            {/* LOGO */}
+            <img
+              src="/Souq-logo-main.png"
+              alt="Souq Back"
+              className="h-[138px] w-auto"
+            />
 
-            <nav className="flex items-center gap-0">
+            {/* DESKTOP NAV */}
+            <nav className="hidden md:flex items-center gap-0">
               {navigationItems.map((item, index) => (
                 <Button
                   key={index}
                   variant="ghost"
-                  className="h-[30px] px-[11px] rounded-[99px] [font-family:'Inter',Helvetica] font-normal text-zinc-700 text-[15px] tracking-[-0.15px] leading-[27px] hover:bg-zinc-50"
+                  className="h-[30px] px-[11px] rounded-[99px] text-zinc-700 text-[15px]"
                 >
                   {item.label}
                 </Button>
@@ -32,18 +45,65 @@ export const HeroSection = () => {
             </nav>
           </div>
 
-          <div className="flex items-center gap-2.5">
-            <Button
-              variant="secondary"
-              className="h-[35px] px-[14px] bg-zinc-100 hover:bg-zinc-200 rounded-[40px] [font-family:'Inter',Helvetica] font-medium text-black text-[15px] tracking-[-0.30px] leading-[18px]"
+          {/* RIGHT */}
+          <div className="flex items-center gap-2">
+            {/* DESKTOP BUTTONS */}
+            <div className="hidden md:flex items-center gap-2">
+              <Button
+                variant="secondary"
+                className="h-[35px] px-[14px] bg-zinc-100 rounded-[40px]"
+              >
+                Whatsapp
+              </Button>
+              <Button className="h-[35px] px-[14px] bg-[#d61834] text-white rounded-[40px]">
+                Book a Call
+              </Button>
+            </div>
+
+            {/* MOBILE HAMBURGER */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setMenuOpen(!menuOpen)}
             >
-              Whatsapp
-            </Button>
-            <Button className="h-[35px] px-[14px] bg-[#d61834] hover:bg-[#b91429] rounded-[40px] [font-family:'Inter',Helvetica] font-medium text-white text-[15px] tracking-[-0.30px] leading-[18px]">
-              Book a Call
-            </Button>
+              {menuOpen ? (
+                <X className="w-6 h-6 text-black" />
+              ) : (
+                <Menu className="w-6 h-6 text-black" />
+              )}
+            </button>
           </div>
         </div>
+
+        {/* MOBILE MENU */}
+        {menuOpen && (
+          <div className="md:hidden absolute top-[68px] left-0 w-full bg-white border-t border-zinc-100 shadow-lg">
+            <div className="flex flex-col px-6 py-6 gap-4">
+              
+              {/* NAV ITEMS */}
+              {navigationItems.map((item, index) => (
+                <Button
+                  key={index}
+                  variant="ghost"
+                  className="justify-start text-[15px]"
+                >
+                  {item.label}
+                </Button>
+              ))}
+
+              {/* CTA BUTTONS */}
+              <Button
+                variant="secondary"
+                className="w-full bg-zinc-100 rounded-[40px]"
+              >
+                Whatsapp
+              </Button>
+
+              <Button className="w-full bg-[#d61834] text-white rounded-[40px]">
+                Book a Call
+              </Button>
+            </div>
+          </div>
+        )}
       </header>
 
       <div className="absolute top-[calc(50%_-_135px)] left-[calc(50%_-_250px)] w-[501px] h-[332px]">
@@ -135,3 +195,4 @@ export const HeroSection = () => {
     </section>
   );
 };
+ 
