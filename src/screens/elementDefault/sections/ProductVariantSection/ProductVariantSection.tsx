@@ -40,38 +40,61 @@ export const ProductVariantSection = () => {
                 </div>
 
                 {/* CTA BUTTON */}
-                <div className="relative bg-zinc-800 rounded-[71px] overflow-hidden flex items-center gap-4 pr-5 pl-[5px] py-[5px] w-full md:min-w-[308px] md:w-auto">
-                  
-                  <div className="w-11 h-11 md:w-12 md:h-12 rounded-3xl bg-[url(/profile-picture---dwg1xjhwq6ucrq3yqbgews2s6k-jpg-1.png)] bg-cover bg-center flex-shrink-0" />
+                <div
+  className="
+    relative
+    bg-zinc-800
+    rounded-[71px]
+    overflow-hidden
+    flex items-center
+    gap-3 md:gap-4
+    pr-12 md:pr-5
+    pl-[5px]
+    py-[6px] md:py-[5px]
+    w-full md:min-w-[308px] md:w-auto
+  "
+>
+  {/* PROFILE */}
+  <div className="w-10 h-10 md:w-12 md:h-12 rounded-3xl bg-[url(/profile-picture---dwg1xjhwq6ucrq3yqbgews2s6k-jpg-1.png)] bg-cover bg-center flex-shrink-0" />
 
-                  <div className="flex flex-col gap-[2px] flex-1 text-center">
-                    <div className="font-medium text-white text-[14px] md:text-[15px]">
-                      Schedule Free Meeting
-                    </div>
-                    <div className="text-zinc-400 text-[12px] md:text-[13px]">
-                      with SouqBack
-                    </div>
-                  </div>
+  {/* TEXT */}
+  <div className="flex flex-col mr-[40px] gap-[2px] flex-1 text-left md:text-center pr-2 md:pr-0">
+    <div className="font-medium  text-white text-[13px] md:text-[15px] leading-tight">
+      Schedule Free Meeting
+    </div>
+    <div className="text-zinc-400 text-[12px] md:text-[13px] leading-tight">
+      with SouqBack
+    </div>
+  </div>
 
-                  {/* LOGO */}
-                  <img
-                    className="absolute left-3 top-1 w-11 h-11 md:w-12 md:h-12 rounded-full"
-                    alt="Souq icon"
-                    src="/souq-logo.jpg"
-                  />
+  {/* LOGO */}
+  <img
+    className="absolute left-3 top-1 w-10 h-10 md:w-12 md:h-12 rounded-full"
+    alt="Souq icon"
+    src="/souq-logo.jpg"
+  />
 
-                  {/* ARROW */}
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 md:w-[43px] md:h-[42px] rounded-full bg-[#D61834] flex items-center justify-center">
-                    <BsArrowRightShort className="text-white text-[26px] md:text-[30px]" />
-                  </div>
+  {/* ARROW */}
+  <a
+    href="https://wa.me/971585771575"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2"
+  >
+    <div className="w-9 h-9 md:w-[43px] md:h-[42px] rounded-full bg-[#D61834] flex items-center justify-center">
+      <BsArrowRightShort className="text-white text-[24px] md:text-[30px]" />
+    </div>
+  </a>
 
-                  {/* ANIMATION (desktop only) */}
-                  <img
-                    className="hidden md:block absolute -right-12 top-1 w-12 h-12"
-                    alt="Animated icon"
-                    src="/animated-icon.svg"
-                  />
-                </div>
+  {/* ANIMATION (desktop only) */}
+  <img
+    className="hidden md:block absolute -right-12 top-1 w-12 h-12"
+    alt="Animated icon"
+    src="/animated-icon.svg"
+  />
+</div>
+
+                
               </div>
             </CardContent>
           </Card>

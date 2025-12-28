@@ -49,16 +49,30 @@ export const HeroSection = () => {
           <div className="flex items-center gap-2">
             {/* DESKTOP BUTTONS */}
             <div className="hidden md:flex items-center gap-2">
-              <Button
-                variant="secondary"
-                className="h-[35px] px-[14px] bg-zinc-100 rounded-[40px]"
-              >
-                Whatsapp
-              </Button>
-              <Button className="h-[35px] px-[14px] bg-[#d61834] text-white rounded-[40px]">
-                Book a Call
-              </Button>
-            </div>
+  <Button
+    asChild
+    variant="secondary"
+    className="h-[35px] px-[14px] bg-zinc-100 rounded-[40px]"
+  >
+    <a
+      href="https://wa.me/971585771575"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
+  </Button>
+
+  <Button
+    asChild
+    className="h-[35px] px-[14px] bg-[#d61834] text-white rounded-[40px]"
+  >
+    <a href="tel:+971585771575">
+      Book a Call
+    </a>
+  </Button>
+</div>
+
 
             {/* MOBILE HAMBURGER */}
             <button
@@ -92,15 +106,29 @@ export const HeroSection = () => {
 
               {/* CTA BUTTONS */}
               <Button
-                variant="secondary"
-                className="w-full bg-zinc-100 rounded-[40px]"
-              >
-                Whatsapp
-              </Button>
+  asChild
+  variant="secondary"
+  className="w-full bg-zinc-100 rounded-[40px]"
+>
+  <a
+    href="https://wa.me/971585771575"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    WhatsApp
+  </a>
+</Button>
 
-              <Button className="w-full bg-[#d61834] text-white rounded-[40px]">
-                Book a Call
-              </Button>
+
+             <Button
+  asChild
+  className="w-full bg-[#d61834] text-white rounded-[40px]"
+>
+  <a href="tel:+971585771575">
+    Call
+  </a>
+</Button>
+
             </div>
           </div>
         )}
@@ -159,12 +187,15 @@ export const HeroSection = () => {
             </Avatar>
 
             <div className="flex flex-col items-center gap-[3.5px]">
-              <span className="[font-family:'Inter',Helvetica] font-medium text-white text-[15px] tracking-[-0.30px] leading-[18px]">
-                Start a chat
-              </span>
-              <span className="[font-family:'Inter',Helvetica] font-normal text-white text-[13px] tracking-[-0.26px] leading-4">
-                with Filip, our founder
-              </span>
+   
+  <span className="font-medium text-white text-[15px] tracking-[-0.30px] leading-[18px]">
+    Start a chat
+  </span>
+  <span className="font-normal text-white text-[13px] tracking-[-0.26px] leading-4">
+    with our founder
+  </span>
+
+
             </div>
 
             <img
@@ -172,10 +203,16 @@ export const HeroSection = () => {
   alt="Permanent icon"
               src="/souq-white.png"
             />
+                     <a
+  href="https://wa.me/971585771575"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex flex-col items-center gap-[3.5px]"
+>
 <div className="absolute right-3 top-1/2 -translate-y-1/2 w-[43px] h-[42px] rounded-full bg-[#D61834] flex items-center justify-center">
   <BsArrowRightShort className="text-white text-[10px]" />
 </div>
-
+</a>
 
 
             <img

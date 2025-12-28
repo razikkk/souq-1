@@ -16,15 +16,21 @@ export const ElementDefault = () => {
           <div className="flex items-center gap-2">
             <MapPinIcon className="w-4 h-4 text-zinc-500" />
             <span className="font-medium text-zinc-500 text-sm whitespace-nowrap">
-              1234 Dubai, UAE
+              UNITED ARAB EMIRATES
             </span>
           </div>
 
           <div className="flex items-center gap-2">
-            <MailIcon className="w-4 h-4 text-zinc-500" />
-            <span className="font-medium text-zinc-500 text-sm whitespace-nowrap">
-              info@souqback.com
-            </span>
+          <a
+  href="mailto:info@souqback.com"
+  className="flex items-center gap-2"
+>
+  <MailIcon className="w-4 h-4 text-zinc-500" />
+  <span className="font-medium text-zinc-500 text-sm whitespace-nowrap">
+    info@souqback.com
+  </span>
+</a>
+
           </div>
         </div>
       </header>
