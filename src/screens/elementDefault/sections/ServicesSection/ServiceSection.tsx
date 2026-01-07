@@ -23,20 +23,20 @@ const services = [
  },
 ];
 
-const statistics = [
-  {
-    value: "76",
-    label: "Clients",
-  },
-  {
-    value: "420",
-    label: "Products Sold",
-  },
-  {
-    value: "24h",
-    label: "Customer Support",
-  },
-];
+// const statistics = [
+//   {
+//     value: "76",
+//     label: "Clients",
+//   },
+//   {
+//     value: "420",
+//     label: "Products Sold",
+//   },
+//   {
+//     value: "24h",
+//     label: "Customer Support",
+//   },
+// ];
 
 export const ServicesSection = ()=> {
   return (
@@ -72,7 +72,7 @@ export const ServicesSection = ()=> {
           </div>
         </div>
 
-        <div
+        {/* <div
   className="
     max-w-[900px]
     mx-auto
@@ -87,17 +87,17 @@ export const ServicesSection = ()=> {
   "
 >
   {statistics.map((stat, index) => (
-    <React.Fragment key={index}>
+    <React.Fragment key={index}> */}
       {/* DESKTOP SEPARATOR */}
-      {index > 0 && (
+      {/* {index > 0 && (
         <Separator
           orientation="vertical"
           className="hidden lg:block h-[60px]"
         />
-      )}
+      )} */}
 
       {/* STAT */}
-      <div className="flex flex-col gap-px items-center text-center">
+      {/* <div className="flex flex-col gap-px items-center text-center">
         <div className="font-normal text-black text-base tracking-[-0.32px] leading-8">
           {stat.value}
         </div>
@@ -107,7 +107,7 @@ export const ServicesSection = ()=> {
       </div>
     </React.Fragment>
   ))}
-</div>
+</div> */}
 
       </div>
     </section>
